@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ct364cqr45grn"]
+
+[ext_resource type="Texture2D" uid="uid://b5lilidspw6u6" path="res://resources/duck.tres" id="1_ql0qm"]
+[ext_resource type="Script" uid="uid://bayqcij3shyy7" path="res://scripts/duck.gd" id="1_tils5"]
+[ext_resource type="AudioStream" uid="uid://k7erthiydt7j" path="res://assets/400 Sounds Pack/Retro/jump_short.wav" id="3_ircvx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tils5"]
+radius = 50.24938
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1548145065]
+script = ExtResource("1_tils5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814378494]
+texture = ExtResource("1_ql0qm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727087037]
+shape = SubResource("CircleShape2D_tils5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1601249057]
+stream = ExtResource("3_ircvx")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c31iphpmwqpx5"]
+
+[ext_resource type="Script" uid="uid://posxxlow0ym4" path="res://scripts/globals.gd" id="1_jjwjd"]
+[ext_resource type="AudioStream" uid="uid://blqdyvr4j68je" path="res://assets/music/Gymnopédie No.1.mp3" id="2_w43bn"]
+
+[node name="Node" type="Node" unique_id=1049674998]
+script = ExtResource("1_jjwjd")
+
+[node name="GymnopédieNo_1" type="AudioStreamPlayer" parent="." unique_id=1162918340]
+stream = ExtResource("2_w43bn")
+autoplay = true

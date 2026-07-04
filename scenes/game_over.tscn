@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d1lpcr33sot8q"]
+
+[ext_resource type="Script" uid="uid://blj5lrd25n0yy" path="res://scripts/game_over.gd" id="1_xeevv"]
+
+[node name="Control" type="Control" unique_id=1149382540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=488850849]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.5
+offset_right = 300.5
+offset_bottom = 137.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1008503066]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER!"
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=1332050244]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="PanelContainer2" unique_id=1794916617]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+
+[node name="PanelContainer3" type="PanelContainer" parent="." unique_id=1161520587]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -69.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="PanelContainer3" unique_id=1503429117]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer3" unique_id=1913362075]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Try Again?"
+
+[connection signal="pressed" from="PanelContainer3/Button" to="." method="_on_button_pressed"]

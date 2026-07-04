@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://o3fwk20y6s6m"]
+
+[ext_resource type="Texture2D" uid="uid://x10hshnrfg6k" path="res://resources/pipe.tres" id="1_8x3ej"]
+[ext_resource type="Script" uid="uid://dt7ceb3m0no2v" path="res://scripts/pipe.gd" id="1_arpqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
+size = Vector2(106, 573)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=511595933]
+gravity_scale = 0.0
+linear_damp_mode = 1
+script = ExtResource("1_arpqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1299006164]
+scale = Vector2(1, 2.5)
+texture = ExtResource("1_8x3ej")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2004133606]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=869406398]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_arpqm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

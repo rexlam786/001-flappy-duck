@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d4eom03jdby2r"]
+
+[ext_resource type="Script" uid="uid://dvb3kun80qrpr" path="res://scripts/score_display.gd" id="1_uxkum"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=312941782]
+z_index = 10
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 69.0
+grow_horizontal = 2
+script = ExtResource("1_uxkum")
+
+[node name="Score" type="Label" parent="." unique_id=126777107]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Score: "
